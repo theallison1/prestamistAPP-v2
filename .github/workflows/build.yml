@@ -9,6 +9,8 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '17'
+          distribution: 'temurin'  # ¡Este es el campo requerido!
+
       - name: Build APK
         run: ./gradlew assembleDebug
       - name: Upload APK
